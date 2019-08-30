@@ -12,9 +12,9 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Cocktails").font(.largeTitle)
+        NavigationView {
             CocktailList()
+            .navigationBarTitle(Text("Cocktails"))
         }
     }
     

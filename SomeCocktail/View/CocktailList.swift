@@ -20,7 +20,8 @@ struct CocktailList: View {
             })
         } else {
             return AnyView( List(model.cocktails) { cocktail in
-                CocktailViewModel(cocktail: cocktail)
+                CocktailView(cocktail: cocktail)
+                NavigationLink("", destination: CocktailDetailView())
             }.listStyle(PlainListStyle()))
         }
     }

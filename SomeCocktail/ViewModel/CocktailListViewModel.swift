@@ -11,14 +11,20 @@ import SwiftUI
 
 class CocktailListViewModel: ObservableObject {
     
+    // MARK: ObservableObject
+    
     init() {
         fetchCocktails()
     }
     
     @Published var cocktails = [Cocktail]()
     
+    // MARK: Custom
+    
+    private let webService = injector.resolve(WebService.self)
+     
     private func fetchCocktails() {
-        WebServiceMock.fetchAll { cocktails in
+        webService?.fetchAll { cocktails in
             self.cocktails = cocktails
         }
     }

@@ -11,10 +11,10 @@ import Foundation
 
 class WebServiceMock: WebService {
     
-    static let MOCK_FILE_NAME = "Cocktails"
-    static let decoder = JSONDecoder()
+    let MOCK_FILE_NAME = "Cocktails"
+    let decoder = JSONDecoder()
     
-    static func fetchAll(completion: @escaping ([Cocktail]) -> Void) {
+    func fetchAll(completion: @escaping ([Cocktail]) -> Void) {
         guard let jsonFile = Bundle.main.path(forResource: MOCK_FILE_NAME, ofType: "json") else { completion([]); return }
         let json = try? String(contentsOfFile: jsonFile)
         guard let data = json?.data(using: .utf8) else { completion([]); return }

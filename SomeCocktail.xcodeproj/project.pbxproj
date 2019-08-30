@@ -20,9 +20,13 @@
 		78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BCC23186A5A005190F1 /* WebServiceMock.swift */; };
 		78476BCF23186AB2005190F1 /* Cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 78476BCE23186AB2005190F1 /* Cocktails.json */; };
 		78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD0231872AF005190F1 /* CocktailResponse.swift */; };
-		78476BD323195D49005190F1 /* CocktailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD223195D49005190F1 /* CocktailViewModel.swift */; };
+		78476BD323195D49005190F1 /* CocktailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD223195D49005190F1 /* CocktailView.swift */; };
 		78476BD523195DA9005190F1 /* CocktailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD423195DA9005190F1 /* CocktailListViewModel.swift */; };
 		78476BD723197A5D005190F1 /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD623197A5D005190F1 /* CocktailList.swift */; };
+		78476BD9231993EE005190F1 /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD8231993EE005190F1 /* Swinject.swift */; };
+		78476BE72319997D005190F1 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BE62319997D005190F1 /* Container.swift */; };
+		78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */; };
+		78476BEB2319B843005190F1 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BEA2319B843005190F1 /* CocktailDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +45,16 @@
 		78476BCC23186A5A005190F1 /* WebServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMock.swift; sourceTree = "<group>"; };
 		78476BCE23186AB2005190F1 /* Cocktails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cocktails.json; sourceTree = "<group>"; };
 		78476BD0231872AF005190F1 /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
-		78476BD223195D49005190F1 /* CocktailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewModel.swift; sourceTree = "<group>"; };
+		78476BD223195D49005190F1 /* CocktailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailView.swift; sourceTree = "<group>"; };
 		78476BD423195DA9005190F1 /* CocktailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewModel.swift; sourceTree = "<group>"; };
 		78476BD623197A5D005190F1 /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
+		78476BD8231993EE005190F1 /* Swinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
+		78476BDB2319985B005190F1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		78476BDC2319985B005190F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		78476BDD2319985B005190F1 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		78476BE62319997D005190F1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailImageViewModel.swift; sourceTree = "<group>"; };
+		78476BEA2319B843005190F1 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			children = (
 				78476BA123184DFB005190F1 /* SomeCocktail */,
 				78476BA023184DFB005190F1 /* Products */,
+				78476BDA2319985A005190F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +88,7 @@
 		78476BA123184DFB005190F1 /* SomeCocktail */ = {
 			isa = PBXGroup;
 			children = (
+				78476BE52319996C005190F1 /* Swinject */,
 				78476BCA23186A35005190F1 /* Mock */,
 				78476BC423185F1A005190F1 /* Extensions */,
 				78476BBF23184F36005190F1 /* Model */,
@@ -119,8 +132,10 @@
 		78476BB923184E32005190F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78476BD223195D49005190F1 /* CocktailView.swift */,
 				78476BA623184DFC005190F1 /* ContentView.swift */,
 				78476BD623197A5D005190F1 /* CocktailList.swift */,
+				78476BEA2319B843005190F1 /* CocktailDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,8 +143,8 @@
 		78476BBA23184E39005190F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				78476BD223195D49005190F1 /* CocktailViewModel.swift */,
 				78476BD423195DA9005190F1 /* CocktailListViewModel.swift */,
+				78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,6 +190,25 @@
 				78476BCC23186A5A005190F1 /* WebServiceMock.swift */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		78476BDA2319985A005190F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78476BDC2319985B005190F1 /* Alamofire.framework */,
+				78476BDB2319985B005190F1 /* AlamofireImage.framework */,
+				78476BDD2319985B005190F1 /* Swinject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78476BE52319996C005190F1 /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				78476BD8231993EE005190F1 /* Swinject.swift */,
+				78476BE62319997D005190F1 /* Container.swift */,
+			);
+			path = Swinject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78476BA323184DFB005190F1 /* AppDelegate.swift in Sources */,
+				78476BD9231993EE005190F1 /* Swinject.swift in Sources */,
 				78476BD523195DA9005190F1 /* CocktailListViewModel.swift in Sources */,
 				78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */,
 				78476BD723197A5D005190F1 /* CocktailList.swift in Sources */,
@@ -259,7 +294,10 @@
 				78476BC323185003005190F1 /* Ingredient.swift in Sources */,
 				78476BBE23184E88005190F1 /* WebService.swift in Sources */,
 				78476BC123184F56005190F1 /* Cocktail.swift in Sources */,
-				78476BD323195D49005190F1 /* CocktailViewModel.swift in Sources */,
+				78476BEB2319B843005190F1 /* CocktailDetailView.swift in Sources */,
+				78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */,
+				78476BE72319997D005190F1 /* Container.swift in Sources */,
+				78476BD323195D49005190F1 /* CocktailView.swift in Sources */,
 				78476BA723184DFC005190F1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +438,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SomeCocktail/Preview Content\"";
 				DEVELOPMENT_TEAM = V67S6WRV9Z;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SomeCocktail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,6 +446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baba.yaga.SomeCocktail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,6 +460,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SomeCocktail/Preview Content\"";
 				DEVELOPMENT_TEAM = V67S6WRV9Z;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SomeCocktail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,6 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baba.yaga.SomeCocktail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
