@@ -12,8 +12,14 @@ struct CocktailViewModel: View {
     var cocktail: Cocktail
     
     var body: some View {
-        HStack {
-            Text(cocktail.name)
+        VStack(spacing: 10) {
+            VStack(alignment: .center) {
+                HStack {
+                    Spacer()
+                }
+                Text(cocktail.name).font(.title)
+                Text("(\(cocktail.alcoholic ?? "unknown"))")
+            }
         }
     }
 }

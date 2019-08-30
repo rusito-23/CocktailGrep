@@ -22,6 +22,7 @@
 		78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD0231872AF005190F1 /* CocktailResponse.swift */; };
 		78476BD323195D49005190F1 /* CocktailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD223195D49005190F1 /* CocktailViewModel.swift */; };
 		78476BD523195DA9005190F1 /* CocktailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD423195DA9005190F1 /* CocktailListViewModel.swift */; };
+		78476BD723197A5D005190F1 /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD623197A5D005190F1 /* CocktailList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		78476BD0231872AF005190F1 /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
 		78476BD223195D49005190F1 /* CocktailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewModel.swift; sourceTree = "<group>"; };
 		78476BD423195DA9005190F1 /* CocktailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewModel.swift; sourceTree = "<group>"; };
+		78476BD623197A5D005190F1 /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				78476BA623184DFC005190F1 /* ContentView.swift */,
+				78476BD623197A5D005190F1 /* CocktailList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				78476BA323184DFB005190F1 /* AppDelegate.swift in Sources */,
 				78476BD523195DA9005190F1 /* CocktailListViewModel.swift in Sources */,
 				78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */,
+				78476BD723197A5D005190F1 /* CocktailList.swift in Sources */,
 				78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */,
 				78476BC623185F25005190F1 /* CodingKey.swift in Sources */,
 				78476BA523184DFC005190F1 /* SceneDelegate.swift in Sources */,
