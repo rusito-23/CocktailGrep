@@ -22,6 +22,7 @@ struct CocktailList: View {
             return AnyView( List(model.cocktails) { cocktail in
                 CocktailView(cocktail: cocktail)
                 NavigationLink("", destination: CocktailDetailView())
+                    .frame(width: 0, height: 0, alignment: .trailing)
             }.listStyle(PlainListStyle()))
         }
     }

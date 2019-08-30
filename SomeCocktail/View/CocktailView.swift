@@ -15,14 +15,18 @@ struct CocktailView: View {
     var body: some View {
         imageModel.imageURL = cocktail.thumb
         
-        return VStack(spacing: 10) {
-            HStack { Spacer() }
-            Text(cocktail.name).font(.title)
-            Text("(\(cocktail.alcoholic ?? "unknown"))")
+        return VStack(alignment: .leading, spacing: 10) {
+            Text(cocktail.name).font(.largeTitle)
+            Text("(\(cocktail.alcoholic ?? "unknown"))").font(.title)
+        }.background(
             Image(uiImage: imageModel.image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 200, height: 200)
-        }
+                .scaledToFill()
+                .allowsHitTesting(false)
+                .clipped()
+        ).cornerRadius(10)
+            .frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,
+                   minHeight: 0, idealHeight: 150, maxHeight: 150,
+                   alignment: .topLeading)
     }
 }
