@@ -10,24 +10,19 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
+    @ObservedObject var model = CocktailListViewModel()
+    
     var body: some View {
-        
-        print("Fetching cocktails")
-        WebServiceMock.fetchAll { cocktails in
-            if cocktails.isEmpty {
-                print("No cocktails available")
-            }
-            for cocktail in cocktails {
-                print(cocktail.name)
-            }
+        if model.cocktails.isEmpty {
+            return AnyView(VStack{
+                Text("Sorry!")
+                Text("No cocktails are available")
+            })
+        } else {
+            return AnyView( List(model.cocktails) { cocktail in
+                CocktailViewModel(cocktail: cocktail)
+            })
         }
-        
-        return Text("Hello World")
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
