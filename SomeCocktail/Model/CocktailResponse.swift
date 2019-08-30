@@ -1,5 +1,5 @@
 //
-//  WebService.swift
+//  CocktailResponse.swift
 //  SomeCocktail
 //
 //  Created by Igor Andruskiewitsch on 8/29/19.
@@ -9,6 +9,6 @@
 import Foundation
 
 
-protocol WebService {
-    static func fetchAll(completion: @escaping ([Cocktail]) -> Void)
+struct CocktailResponse: Decodable {
+    var drinks: [Cocktail]
 }

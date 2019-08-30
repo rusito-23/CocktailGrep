@@ -9,15 +9,24 @@
 import Foundation
 
 protocol IndexableKey: CodingKey {
-    var stringValue: String { get }
+    var stringTemplate: String { get }
 }
+
+class IndexableKeyImpl: IndexableKey {
+    var stringTemplate: String {
+        get { return "" }
+    }
+    var intValue: Int?
+    var stringValue: String { get {
+        String.init(format: self.stringTemplate, intValue ?? 0)
+    }}
     
-extension IndexableKey {
-    init?(stringValue: String) {
+    required init?(stringValue: String) {
         return nil
     }
     
-    init?(intValue: Int) {
-        self.init(intValue: intValue)
-    }    
+    required init?(intValue: Int) {
+        self.intValue = intValue
+    }
+
 }

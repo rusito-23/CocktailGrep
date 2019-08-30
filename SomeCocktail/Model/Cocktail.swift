@@ -14,13 +14,13 @@ struct Cocktail: Identifiable, Decodable {
     
     var id: String
     var name: String
-    var drinkAlt: String
-    var video: String
-    var alcoholic: String
-    var glass: String
-    var instructions: String
-    var thumb: String
-    var ingredients: [Ingredient]
+    var drinkAlt: String?
+    var video: String?
+    var alcoholic: String?
+    var glass: String?
+    var instructions: String?
+    var thumb: String?
+    var ingredients: [Ingredient?]
     
     // MARK: Keys
     
@@ -35,35 +35,52 @@ struct Cocktail: Identifiable, Decodable {
         case thumb = "strDrinkThumb"
     }
     
-    private struct IngredientKey: IndexableKey {
-        var intValue: Int?
-        var stringValue: String { get {
-            return "strIngredient\(self.intValue ?? 1)"
-        }}
+    private class IngredientKey: IndexableKeyImpl {
+        override var stringTemplate: String {
+            get {
+                return  "strIngredient%d"
+            }
+        }
     }
     
-    private struct MeasureKey: IndexableKey {
-        var intValue: Int?
-        var stringValue: String { get {
-            return "strMeasure\(self.intValue ?? 1)"
-        }}
+    private class MeasureKey: IndexableKeyImpl {
+        override var stringTemplate: String {
+            get {
+                return "strMeasure%d"
+            }
+        }
     }
     
     // MARK: Init from decoder
     
     init(from decoder: Decoder) throws {
-        try self.init(from: decoder)
-
+        // containers
+        
+        let defaultContainer = try decoder.container(keyedBy: CodingKeys.self)
         let ingredientContainer = try decoder.container(keyedBy: IngredientKey.self)
         let measureContainer = try decoder.container(keyedBy: MeasureKey.self)
-
+        
+        // default values
+        
+        self.id = try defaultContainer.decode(String.self, forKey: .id)
+        self.name = try defaultContainer.decode(String.self, forKey: .name)
+        self.drinkAlt = try defaultContainer.decodeIfPresent(String.self, forKey: .drinkAlt)
+        self.video = try defaultContainer.decodeIfPresent(String.self, forKey: .video)
+        self.alcoholic = try defaultContainer.decodeIfPresent(String.self, forKey: .alcoholic)
+        self.glass = try defaultContainer.decodeIfPresent(String.self, forKey: .glass)
+        self.instructions = try defaultContainer.decodeIfPresent(String.self, forKey: .instructions)
+        self.thumb = try defaultContainer.decodeIfPresent(String.self, forKey: .thumb)
+        
+        // ingredients
+        
         self.ingredients = []
         for i in 1...15 {
-            guard let ingredientKey = IngredientKey(intValue: i) else { continue }
-            guard let measureKey = MeasureKey(intValue: i) else { continue }
-            
-            let name = try ingredientContainer.decode(String.self, forKey: ingredientKey)
-            let measure = try measureContainer.decode(String.self, forKey: measureKey)
+            guard let ingredientKey = IngredientKey(intValue: i),
+                let measureKey = MeasureKey(intValue: i),
+                let name = try? ingredientContainer.decode(String.self, forKey: ingredientKey),
+                let measure = try? measureContainer.decode(String.self, forKey: measureKey) else {
+                    continue
+            }
             
             ingredients.append(Ingredient(id: i, name: name, measure: measure))
         }

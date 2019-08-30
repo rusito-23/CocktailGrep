@@ -17,6 +17,9 @@
 		78476BC123184F56005190F1 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BC023184F56005190F1 /* Cocktail.swift */; };
 		78476BC323185003005190F1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BC223185003005190F1 /* Ingredient.swift */; };
 		78476BC623185F25005190F1 /* CodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BC523185F25005190F1 /* CodingKey.swift */; };
+		78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BCC23186A5A005190F1 /* WebServiceMock.swift */; };
+		78476BCF23186AB2005190F1 /* Cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 78476BCE23186AB2005190F1 /* Cocktails.json */; };
+		78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD0231872AF005190F1 /* CocktailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		78476BC023184F56005190F1 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		78476BC223185003005190F1 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		78476BC523185F25005190F1 /* CodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingKey.swift; sourceTree = "<group>"; };
+		78476BCC23186A5A005190F1 /* WebServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMock.swift; sourceTree = "<group>"; };
+		78476BCE23186AB2005190F1 /* Cocktails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cocktails.json; sourceTree = "<group>"; };
+		78476BD0231872AF005190F1 /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		78476BA123184DFB005190F1 /* SomeCocktail */ = {
 			isa = PBXGroup;
 			children = (
+				78476BCA23186A35005190F1 /* Mock */,
 				78476BC423185F1A005190F1 /* Extensions */,
 				78476BBF23184F36005190F1 /* Model */,
 				78476BBB23184E3E005190F1 /* Service */,
@@ -121,6 +128,7 @@
 		78476BBB23184E3E005190F1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				78476BCB23186A41005190F1 /* Implementation */,
 				78476BBD23184E88005190F1 /* WebService.swift */,
 			);
 			path = Service;
@@ -131,6 +139,7 @@
 			children = (
 				78476BC023184F56005190F1 /* Cocktail.swift */,
 				78476BC223185003005190F1 /* Ingredient.swift */,
+				78476BD0231872AF005190F1 /* CocktailResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +150,22 @@
 				78476BC523185F25005190F1 /* CodingKey.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78476BCA23186A35005190F1 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				78476BCE23186AB2005190F1 /* Cocktails.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		78476BCB23186A41005190F1 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				78476BCC23186A5A005190F1 /* WebServiceMock.swift */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +229,7 @@
 				78476BAF23184DFD005190F1 /* LaunchScreen.storyboard in Resources */,
 				78476BAC23184DFD005190F1 /* Preview Assets.xcassets in Resources */,
 				78476BA923184DFD005190F1 /* Assets.xcassets in Resources */,
+				78476BCF23186AB2005190F1 /* Cocktails.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				78476BA323184DFB005190F1 /* AppDelegate.swift in Sources */,
+				78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */,
+				78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */,
 				78476BC623185F25005190F1 /* CodingKey.swift in Sources */,
 				78476BA523184DFC005190F1 /* SceneDelegate.swift in Sources */,
 				78476BC323185003005190F1 /* Ingredient.swift in Sources */,

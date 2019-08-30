@@ -8,9 +8,21 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        
+        print("Fetching cocktails")
+        WebServiceMock.fetchAll { cocktails in
+            if cocktails.isEmpty {
+                print("No cocktails available")
+            }
+            for cocktail in cocktails {
+                print(cocktail.name)
+            }
+        }
+        
+        return Text("Hello World")
     }
 }
 
