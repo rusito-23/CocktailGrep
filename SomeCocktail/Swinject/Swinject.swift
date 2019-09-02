@@ -15,7 +15,7 @@ class Swinject {
     fileprivate static let container = Container.self
     
     public static func setup() {
-        container.register(WebService.self, WebServiceMock())
+        container.register(WebService.self, WebServiceImpl())
     }
     
 }

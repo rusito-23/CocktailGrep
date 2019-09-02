@@ -20,23 +20,23 @@ class CocktailImageViewModel: ObservableObject {
     }
     
     @Published var image = UIImage(named: "cock_placeholder")!
-    var loading = true
     
     // MARK: Custom
     
+    var loading = true
+    private let webService = injector.resolve(WebService.self)
+    
     func loadImage(url: String?) {
-        guard let thumbURLString = url,
-            let thumbURL = URL(string: thumbURLString) else { return }
-            
-        URLSession.shared.dataTask(with: thumbURL) { (data, res, error) in
+        webService?.image(by: url) { [weak self] image in
+            guard let `self` = self else { return }
             DispatchQueue.main.async {
-                if let `data` = data,
-                    let image = UIImage(data: data) {
-                    self.image = image
+                if let `image` = image {
                     self.loading = false
+                    self.image = image
                 }
             }
-        }.resume()
+        }
+        
     }
     
 }

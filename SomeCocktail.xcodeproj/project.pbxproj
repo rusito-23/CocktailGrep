@@ -29,6 +29,8 @@
 		78476BEB2319B843005190F1 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BEA2319B843005190F1 /* CocktailDetailView.swift */; };
 		78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BED231D50D8005190F1 /* StrokeText.swift */; };
 		78476BF0231D712B005190F1 /* UIImage+isDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BEF231D712B005190F1 /* UIImage+isDark.swift */; };
+		78476BF6231D8FE1005190F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BF5231D8FE1005190F1 /* Constants.swift */; };
+		78476BF8231DB35A005190F1 /* WebServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BF7231DB35A005190F1 /* WebServiceImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		78476BEA2319B843005190F1 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
 		78476BED231D50D8005190F1 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		78476BEF231D712B005190F1 /* UIImage+isDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+isDark.swift"; sourceTree = "<group>"; };
+		78476BF5231D8FE1005190F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78476BF7231DB35A005190F1 /* WebServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			children = (
 				78476BCB23186A41005190F1 /* Implementation */,
 				78476BBD23184E88005190F1 /* WebService.swift */,
+				78476BF5231D8FE1005190F1 /* Constants.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				78476BCC23186A5A005190F1 /* WebServiceMock.swift */,
+				78476BF7231DB35A005190F1 /* WebServiceImpl.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 				78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */,
 				78476BD723197A5D005190F1 /* CocktailList.swift in Sources */,
 				78476BF0231D712B005190F1 /* UIImage+isDark.swift in Sources */,
+				78476BF8231DB35A005190F1 /* WebServiceImpl.swift in Sources */,
 				78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */,
 				78476BC623185F25005190F1 /* CodingKey.swift in Sources */,
 				78476BA523184DFC005190F1 /* SceneDelegate.swift in Sources */,
@@ -311,6 +318,7 @@
 				78476BC123184F56005190F1 /* Cocktail.swift in Sources */,
 				78476BEB2319B843005190F1 /* CocktailDetailView.swift in Sources */,
 				78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */,
+				78476BF6231D8FE1005190F1 /* Constants.swift in Sources */,
 				78476BE72319997D005190F1 /* Container.swift in Sources */,
 				78476BD323195D49005190F1 /* CocktailView.swift in Sources */,
 				78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */,

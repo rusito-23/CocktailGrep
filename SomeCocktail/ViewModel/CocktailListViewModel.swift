@@ -24,8 +24,10 @@ class CocktailListViewModel: ObservableObject {
     private let webService = injector.resolve(WebService.self)
      
     private func fetchCocktails() {
-        webService?.fetchAll { cocktails in
-            self.cocktails = cocktails
+        webService?.search(by: "") { cocktails in
+            DispatchQueue.main.async {
+                self.cocktails = cocktails
+            }
         }
     }
     

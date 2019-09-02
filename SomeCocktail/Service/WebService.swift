@@ -7,8 +7,12 @@
 //
 
 import Foundation
-
+import UIKit
 
 protocol WebService {
-    func fetchAll(completion: @escaping ([Cocktail]) -> Void)
+    
+    func search(by name: String, completion: @escaping ([Cocktail]) -> Void)
+    
+    func image(by url: String?, completion: @escaping (UIImage?) -> Void)
+    
 }
