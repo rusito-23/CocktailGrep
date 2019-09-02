@@ -28,6 +28,7 @@
 		78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */; };
 		78476BEB2319B843005190F1 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BEA2319B843005190F1 /* CocktailDetailView.swift */; };
 		78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BED231D50D8005190F1 /* StrokeText.swift */; };
+		78476BF0231D712B005190F1 /* UIImage+isDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BEF231D712B005190F1 /* UIImage+isDark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailImageViewModel.swift; sourceTree = "<group>"; };
 		78476BEA2319B843005190F1 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
 		78476BED231D50D8005190F1 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
+		78476BEF231D712B005190F1 /* UIImage+isDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+isDark.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				78476BC523185F25005190F1 /* CodingKey.swift */,
+				78476BEF231D712B005190F1 /* UIImage+isDark.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				78476BD523195DA9005190F1 /* CocktailListViewModel.swift in Sources */,
 				78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */,
 				78476BD723197A5D005190F1 /* CocktailList.swift in Sources */,
+				78476BF0231D712B005190F1 /* UIImage+isDark.swift in Sources */,
 				78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */,
 				78476BC623185F25005190F1 /* CodingKey.swift in Sources */,
 				78476BA523184DFC005190F1 /* SceneDelegate.swift in Sources */,

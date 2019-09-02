@@ -20,21 +20,25 @@ struct CocktailView: View {
         return self.imageModel.loading ? 0.1 : 1
     }
     
+    var alcoholicSign: UIImage {
+        let alcoholic = cocktail.alcoholic ?? "unknown"
+        return alcoholic == "Alcoholic" ? UIImage() : UIImage(named: "alcohol_free")!
+    }
+    
     var body: some View {
         imageModel.imageURL = cocktail.thumb
         
         return VStack(alignment: .leading) {
             
-            StrokeText(text: cocktail.name,
-                       font: UIFont(name:"Helvetica-Bold", size: 35.0)!)
-                .padding(.leading)
+            HStack() {
+                StrokeText(text: cocktail.name,
+                           font: UIFont(name:"Helvetica-Bold", size: 35.0)!)
+                    .padding(.leading).padding(.top, -50)
+
+                Image(uiImage: alcoholicSign).resizable()
+                    .frame(width: 150, height: 150)
+            }
             
-            StrokeText(text: "(\(cocktail.alcoholic ?? "unknown"))",
-                font: UIFont(name:"Helvetica", size: 18.0)!)
-                .padding(.leading)
-                .padding(.top, -60.0)
-            
-            Spacer()
             Spacer()
             
         }.frame(minWidth: 0, maxWidth: .infinity,
