@@ -19,7 +19,8 @@ class CocktailImageViewModel: ObservableObject {
         }
     }
     
-    @Published var image = UIImage()
+    @Published var image = UIImage(named: "cock_placeholder")!
+    var loading = true
     
     // MARK: Custom
     
@@ -32,6 +33,7 @@ class CocktailImageViewModel: ObservableObject {
                 if let `data` = data,
                     let image = UIImage(data: data) {
                     self.image = image
+                    self.loading = false
                 }
             }
         }.resume()

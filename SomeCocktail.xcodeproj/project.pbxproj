@@ -27,6 +27,7 @@
 		78476BE72319997D005190F1 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BE62319997D005190F1 /* Container.swift */; };
 		78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */; };
 		78476BEB2319B843005190F1 /* CocktailDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BEA2319B843005190F1 /* CocktailDetailView.swift */; };
+		78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BED231D50D8005190F1 /* StrokeText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		78476BE62319997D005190F1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		78476BE82319AE1C005190F1 /* CocktailImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailImageViewModel.swift; sourceTree = "<group>"; };
 		78476BEA2319B843005190F1 /* CocktailDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailView.swift; sourceTree = "<group>"; };
+		78476BED231D50D8005190F1 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		78476BB923184E32005190F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78476BEC231D50C3005190F1 /* Generics */,
 				78476BD223195D49005190F1 /* CocktailView.swift */,
 				78476BA623184DFC005190F1 /* ContentView.swift */,
 				78476BD623197A5D005190F1 /* CocktailList.swift */,
@@ -209,6 +212,14 @@
 				78476BE62319997D005190F1 /* Container.swift */,
 			);
 			path = Swinject;
+			sourceTree = "<group>";
+		};
+		78476BEC231D50C3005190F1 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				78476BED231D50D8005190F1 /* StrokeText.swift */,
+			);
+			path = Generics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 				78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */,
 				78476BE72319997D005190F1 /* Container.swift in Sources */,
 				78476BD323195D49005190F1 /* CocktailView.swift in Sources */,
+				78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */,
 				78476BA723184DFC005190F1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

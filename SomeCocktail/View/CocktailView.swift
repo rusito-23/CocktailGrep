@@ -12,18 +12,26 @@ struct CocktailView: View {
     var cocktail: Cocktail
     @ObservedObject var imageModel = CocktailImageViewModel()
     
+    var backgroundStyle: ContentMode {
+        return self.imageModel.loading ? .fit : .fill
+    }
+    
     var body: some View {
         imageModel.imageURL = cocktail.thumb
         
         return VStack(alignment: .leading, spacing: 10) {
-            Text(cocktail.name).font(.largeTitle)
-            Text("(\(cocktail.alcoholic ?? "unknown"))").font(.title)
+            
+            StrokeText(text: cocktail.name,
+                       font: UIFont(name:"Helvetica-Bold", size: 32.0)!)
+            StrokeText(text: "(\(cocktail.alcoholic ?? "unknown"))",
+                font: UIFont(name:"Helvetica", size: 18.0)!)
+            
         }.frame(minWidth: 0, maxWidth: .infinity,
                 minHeight: 0, maxHeight: 200, alignment: .topLeading)
         .background(
             Image(uiImage: imageModel.image)
                 .resizable()
-                .scaledToFill()
-        ).cornerRadius(10)
+                .aspectRatio(contentMode: backgroundStyle)
+        ).cornerRadius(6)
     }
 }
