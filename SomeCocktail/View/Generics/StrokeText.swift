@@ -18,17 +18,15 @@ struct StrokeText: UIViewRepresentable {
         let attributedString = NSAttributedString(
             string: text,
             attributes:[
-                NSAttributedString.Key.paragraphStyle: NSMutableParagraphStyle(),
-                NSAttributedString.Key.strokeWidth: -3.0,
-                NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.strokeColor: UIColor.black,
-                NSAttributedString.Key.font: font
+                .strokeWidth: -1.5,
+                .foregroundColor: UIColor.white,
+                .strokeColor: UIColor.black,
+                .font: font
             ]
         )
 
         let strokeLabel = UILabel(frame: CGRect.zero)
         strokeLabel.attributedText = attributedString
-        strokeLabel.sizeToFit()
         return strokeLabel
     }
 
