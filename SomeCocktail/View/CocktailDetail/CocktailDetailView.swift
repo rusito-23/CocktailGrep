@@ -18,14 +18,15 @@ struct CocktailDetailView: View {
     }
     
     var body: some View {
-        
-        VStack() {
-            Text(cocktail.name).font(.largeTitle)
-            Image(uiImage: imageModel.image).resizable()
-                .frame(width: 400, height: 400, alignment: .center)
-            HStack() {
+        ScrollView() {
+            VStack() {
+                Text(cocktail.name).font(.largeTitle).fontWeight(.bold)
+                Image(uiImage: imageModel.image).resizable()
+                    .frame(width: 400, height: 400, alignment: .center)
+                    .cornerRadius(6)
                 Text(cocktail.instructions ?? "No instructions").font(.body)
-            }.padding()
-        }.padding()
+                    .frame(width: 400, height: 400, alignment: .center)
+            }
+        }
     }
 }

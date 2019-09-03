@@ -1,5 +1,5 @@
 //
-//  CocktailView.swift
+//  CocktailCard.swift
 //  SomeCocktail
 //
 //  Created by Igor Andruskiewitsch on 8/30/19.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CocktailView: View {
+struct CocktailCard: View {
     var cocktail: Cocktail
     @ObservedObject var imageModel = CocktailImageViewModel()
     

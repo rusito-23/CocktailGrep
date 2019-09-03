@@ -20,7 +20,7 @@
 		78476BCD23186A5A005190F1 /* WebServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BCC23186A5A005190F1 /* WebServiceMock.swift */; };
 		78476BCF23186AB2005190F1 /* Cocktails.json in Resources */ = {isa = PBXBuildFile; fileRef = 78476BCE23186AB2005190F1 /* Cocktails.json */; };
 		78476BD1231872AF005190F1 /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD0231872AF005190F1 /* CocktailResponse.swift */; };
-		78476BD323195D49005190F1 /* CocktailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD223195D49005190F1 /* CocktailView.swift */; };
+		78476BD323195D49005190F1 /* CocktailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD223195D49005190F1 /* CocktailCard.swift */; };
 		78476BD523195DA9005190F1 /* CocktailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD423195DA9005190F1 /* CocktailListViewModel.swift */; };
 		78476BD723197A5D005190F1 /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD623197A5D005190F1 /* CocktailList.swift */; };
 		78476BD9231993EE005190F1 /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BD8231993EE005190F1 /* Swinject.swift */; };
@@ -33,6 +33,7 @@
 		78476BF8231DB35A005190F1 /* WebServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BF7231DB35A005190F1 /* WebServiceImpl.swift */; };
 		78476BFB231DB8CB005190F1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BFA231DB8CB005190F1 /* Logger.swift */; };
 		78476BFD231EE059005190F1 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BFC231EE059005190F1 /* Date+Formatter.swift */; };
+		78476C02231F01ED005190F1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476C01231F01ED005190F1 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +52,7 @@
 		78476BCC23186A5A005190F1 /* WebServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMock.swift; sourceTree = "<group>"; };
 		78476BCE23186AB2005190F1 /* Cocktails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cocktails.json; sourceTree = "<group>"; };
 		78476BD0231872AF005190F1 /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
-		78476BD223195D49005190F1 /* CocktailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailView.swift; sourceTree = "<group>"; };
+		78476BD223195D49005190F1 /* CocktailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCard.swift; sourceTree = "<group>"; };
 		78476BD423195DA9005190F1 /* CocktailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewModel.swift; sourceTree = "<group>"; };
 		78476BD623197A5D005190F1 /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
 		78476BD8231993EE005190F1 /* Swinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		78476BF7231DB35A005190F1 /* WebServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceImpl.swift; sourceTree = "<group>"; };
 		78476BFA231DB8CB005190F1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		78476BFC231EE059005190F1 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		78476C01231F01ED005190F1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +147,11 @@
 		78476BB923184E32005190F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78476BEC231D50C3005190F1 /* Generics */,
-				78476BD223195D49005190F1 /* CocktailView.swift */,
+				78476C00231F01DA005190F1 /* Generic */,
+				78476BFF231F0027005190F1 /* CocktailDetail */,
+				78476BFE231F001E005190F1 /* CocktailList */,
+				78476BEC231D50C3005190F1 /* Text */,
 				78476BA623184DFC005190F1 /* ContentView.swift */,
-				78476BD623197A5D005190F1 /* CocktailList.swift */,
-				78476BEA2319B843005190F1 /* CocktailDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,12 +230,12 @@
 			path = Swinject;
 			sourceTree = "<group>";
 		};
-		78476BEC231D50C3005190F1 /* Generics */ = {
+		78476BEC231D50C3005190F1 /* Text */ = {
 			isa = PBXGroup;
 			children = (
 				78476BED231D50D8005190F1 /* StrokeText.swift */,
 			);
-			path = Generics;
+			path = Text;
 			sourceTree = "<group>";
 		};
 		78476BF9231DB8B6005190F1 /* Logger */ = {
@@ -243,6 +245,31 @@
 				78476BFC231EE059005190F1 /* Date+Formatter.swift */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		78476BFE231F001E005190F1 /* CocktailList */ = {
+			isa = PBXGroup;
+			children = (
+				78476BD223195D49005190F1 /* CocktailCard.swift */,
+				78476BD623197A5D005190F1 /* CocktailList.swift */,
+			);
+			path = CocktailList;
+			sourceTree = "<group>";
+		};
+		78476BFF231F0027005190F1 /* CocktailDetail */ = {
+			isa = PBXGroup;
+			children = (
+				78476BEA2319B843005190F1 /* CocktailDetailView.swift */,
+			);
+			path = CocktailDetail;
+			sourceTree = "<group>";
+		};
+		78476C00231F01DA005190F1 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				78476C01231F01ED005190F1 /* LoadingView.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,9 +363,10 @@
 				78476BE92319AE1C005190F1 /* CocktailImageViewModel.swift in Sources */,
 				78476BF6231D8FE1005190F1 /* Constants.swift in Sources */,
 				78476BE72319997D005190F1 /* Container.swift in Sources */,
-				78476BD323195D49005190F1 /* CocktailView.swift in Sources */,
+				78476BD323195D49005190F1 /* CocktailCard.swift in Sources */,
 				78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */,
 				78476BA723184DFC005190F1 /* ContentView.swift in Sources */,
+				78476C02231F01ED005190F1 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

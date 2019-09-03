@@ -18,6 +18,7 @@ class CocktailListViewModel: ObservableObject {
     }
     
     @Published var cocktails = [Cocktail]()
+    @Published var loading = true
     
     // MARK: Custom
     
@@ -27,6 +28,7 @@ class CocktailListViewModel: ObservableObject {
         webService?.search(by: "") { cocktails in
             DispatchQueue.main.async {
                 self.cocktails = cocktails
+                self.loading = false
             }
         }
     }
