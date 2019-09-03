@@ -25,18 +25,19 @@ extension WebServiceImpl {
             guard let `self` = self else { return }
             
             if let `error` = error {
-                print("Search by name error: \(error)")
+                logger.error(error)
                 completion([])
                 return
             }
             
             guard let `data` = data,
                 let cocktailRes = try? self.decoder.decode(CocktailResponse.self, from: data) else {
-                    print("Search by name parse error")
+                    logger.error("Parse error")
                     completion([])
                     return
             }
             
+            logger.info("Cocktails fetch success!")
             completion(cocktailRes.drinks)
         }.resume()
     }
@@ -51,6 +52,7 @@ extension WebServiceImpl {
                     completion(nil)
                     return
             }
+            logger.info("Cocktail thumb image fetch success!")
             completion(image)
         }.resume()
     }
