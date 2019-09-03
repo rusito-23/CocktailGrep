@@ -37,7 +37,7 @@ extension WebServiceImpl {
                     return
             }
             
-            logger.info("Cocktails fetch success!")
+            logger.verbose("Cocktails fetch success!")
             completion(cocktailRes.drinks)
         }.resume()
     }
@@ -47,12 +47,21 @@ extension WebServiceImpl {
             let thumbURL = URL(string: thumbURLString) else { return }
         
         URLSession.shared.dataTask(with: thumbURL) { (data, res, error) in
+            
+            if let `error` = error {
+                logger.error(error)
+                completion(nil)
+                return
+            }
+            
             guard let `data` = data,
                 let image = UIImage(data: data) else {
+                    logger.error("Error creating UIImage")
                     completion(nil)
                     return
             }
-            logger.info("Cocktail thumb image fetch success!")
+            
+            logger.verbose("Cocktail thumb image fetch success!")
             completion(image)
         }.resume()
     }
