@@ -20,7 +20,7 @@ struct CocktailListContainer: View {
         
         return AnyView(
             VStack {
-                TextField("Search by name", text: $searchField)
+                // TextField("Search by name", text: $searchField)
                 CocktailList(cocktails: self.model.cocktails)
             }
         )
