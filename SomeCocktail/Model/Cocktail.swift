@@ -20,7 +20,7 @@ struct Cocktail: Identifiable, Decodable {
     var glass: String?
     var instructions: String?
     var thumb: String?
-    var ingredients: [Ingredient?]
+    var ingredients: [Ingredient]
     
     // MARK: Keys
     
@@ -78,7 +78,8 @@ struct Cocktail: Identifiable, Decodable {
             guard let ingredientKey = IngredientKey(intValue: i),
                 let measureKey = MeasureKey(intValue: i),
                 let name = try? ingredientContainer.decode(String.self, forKey: ingredientKey),
-                let measure = try? measureContainer.decode(String.self, forKey: measureKey) else {
+                let measure = try? measureContainer.decode(String.self, forKey: measureKey),
+                !name.isEmpty else {
                     continue
             }
             

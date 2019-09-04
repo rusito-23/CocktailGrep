@@ -23,10 +23,13 @@ struct CocktailList: View {
         } else {
             return AnyView(
                 List(self.model.cocktails) { cocktail in
+                    
                     CocktailCard(cocktail: cocktail)
+                    
                     NavigationLink("", destination: CocktailDetailView(cocktail: cocktail ))
                         .frame(width: 0, height: 0, alignment: .trailing)
-                }.listStyle(DefaultListStyle())
+                    
+                }.listStyle(GroupedListStyle())
             )
         }
     }

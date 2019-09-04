@@ -18,14 +18,46 @@ struct CocktailDetailView: View {
     }
     
     var body: some View {
-        ScrollView() {
-            VStack() {
-                Text(cocktail.name).font(.largeTitle).fontWeight(.bold)
-                Image(uiImage: imageModel.image).resizable()
-                    .frame(width: 400, height: 400, alignment: .center)
-                    .cornerRadius(6)
-                Text(cocktail.instructions ?? "No instructions").font(.body)
-                    .frame(width: 400, height: 400, alignment: .center)
+        LoadingView(isShowing: .constant(imageModel.loading)) {
+            ScrollView {
+                VStack {
+                    
+                    // MARK: General
+                    
+                    Text(self.cocktail.name)
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    
+                    Image(uiImage: self.imageModel.image)
+                        .resizable()
+                        .frame(width: 400, height: 400, alignment: .center)
+                        .cornerRadius(6)
+                    
+                    // MARK: Instructions
+                    
+                    Text(self.cocktail.instructions ?? "Sorry! No instructions")
+                        .lineLimit(nil)
+                        .lineSpacing(10)
+                        .multilineTextAlignment(.center)
+                        .frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,
+                               minHeight: 50, idealHeight: 100, maxHeight: 500, alignment: .center)
+                        .padding(.leading, 10)
+                        .padding(.trailing, 10)
+                    
+                    // MARK: Ingredients
+                    
+                    Text("Ingredients").font(.title)
+                    ForEach(self.cocktail.ingredients) { ingredient in                        
+                        HStack {
+
+                            Text(ingredient.name)
+                            Spacer().background(Color.black)
+                            Text(ingredient.measure)
+
+                        }.padding(.leading, 30).padding(.trailing, 30).padding(.bottom, 10)
+                    }
+                    
+                }
             }
         }
     }
