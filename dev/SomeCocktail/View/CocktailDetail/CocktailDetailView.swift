@@ -35,10 +35,9 @@ struct CocktailDetailView: View {
                         .lineLimit(nil)
                         .lineSpacing(10)
                         .multilineTextAlignment(.center)
-                        .frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,
-                               minHeight: 50, idealHeight: 100, maxHeight: 500, alignment: .center)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
+                        .frame(idealHeight: .greatestFiniteMagnitude)
+                        .padding(.leading, 30)
+                        .padding(.trailing, 30)
                     
                     // MARK: Ingredients
                     
@@ -52,7 +51,7 @@ struct CocktailDetailView: View {
 
                         }.padding(.leading, 30).padding(.trailing, 30).padding(.bottom, 10)
                     }
-                    
+                    Spacer().frame(width: 200, height: 32)
                 }
             }.navigationBarTitle(self.cocktail.name)
         }
