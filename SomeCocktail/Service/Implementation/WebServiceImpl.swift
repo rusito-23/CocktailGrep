@@ -18,6 +18,7 @@ class WebServiceImpl: WebService {
 extension WebServiceImpl {
     
     func search(by name: String, completion: @escaping ([Cocktail]) -> Void) {
+        let `name` = name.replacingOccurrences(of: " ", with: "%20")
         let urlString = Constants.URL.BASE + Constants.API_KEY + Constants.URL.SEARCH + name
         guard let url = URL(string: urlString) else { completion([]); return }
         

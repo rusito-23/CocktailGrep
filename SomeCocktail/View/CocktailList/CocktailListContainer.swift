@@ -28,8 +28,8 @@ struct CocktailListContainer: View {
                                 .padding(.trailing, 10).padding(.leading, 10)
                         }
                     }
-
-                }
+                    
+                }.listStyle(GroupedListStyle())
             }
         }
     }
