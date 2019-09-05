@@ -18,7 +18,7 @@ struct CocktailListContainer: View {
                 List {
                     SearchBar(didChange: { query in
                         self.model.query = query
-                    })
+                    }, placeHolder: "Search by name")
                     
                     ForEach(self.model.cocktails) { cocktail in
                         NavigationLink(destination: CocktailDetailView(cocktail: cocktail)) {

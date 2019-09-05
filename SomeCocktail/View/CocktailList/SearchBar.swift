@@ -13,6 +13,7 @@ import SwiftUI
 
 struct SearchBar: UIViewRepresentable {
     var didChange: (String) -> Void
+    var placeHolder: String?
 
     class Coordinator: NSObject, UISearchBarDelegate {
 
@@ -33,6 +34,7 @@ struct SearchBar: UIViewRepresentable {
 
     func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
         let searchBar = UISearchBar(frame: .zero)
+        searchBar.placeholder = placeHolder
         searchBar.barTintColor = .white
         searchBar.delegate = context.coordinator
         return searchBar
