@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		78199D0A231F0A2800D0297F /* Array+NilRemoval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78199D09231F0A2800D0297F /* Array+NilRemoval.swift */; };
 		78199D0C231FF79700D0297F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78199D0B231FF79700D0297F /* ErrorView.swift */; };
-		78199D0E231FF82600D0297F /* CocktailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78199D0D231FF82600D0297F /* CocktailList.swift */; };
+		78199D10232039FD00D0297F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78199D0F232039FD00D0297F /* SearchBar.swift */; };
 		78476BA323184DFB005190F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BA223184DFB005190F1 /* AppDelegate.swift */; };
 		78476BA523184DFC005190F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BA423184DFC005190F1 /* SceneDelegate.swift */; };
 		78476BA723184DFC005190F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78476BA623184DFC005190F1 /* ContentView.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		78199D09231F0A2800D0297F /* Array+NilRemoval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+NilRemoval.swift"; sourceTree = "<group>"; };
 		78199D0B231FF79700D0297F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		78199D0D231FF82600D0297F /* CocktailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailList.swift; sourceTree = "<group>"; };
+		78199D0F232039FD00D0297F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		78476B9F23184DFB005190F1 /* SomeCocktail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SomeCocktail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78476BA223184DFB005190F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78476BA423184DFC005190F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 				78476BD223195D49005190F1 /* CocktailCard.swift */,
 				78476BD623197A5D005190F1 /* CocktailListContainer.swift */,
 				78199D0B231FF79700D0297F /* ErrorView.swift */,
-				78199D0D231FF82600D0297F /* CocktailList.swift */,
+				78199D0F232039FD00D0297F /* SearchBar.swift */,
 			);
 			path = CocktailList;
 			sourceTree = "<group>";
@@ -367,6 +367,7 @@
 				78476BA523184DFC005190F1 /* SceneDelegate.swift in Sources */,
 				78476BC323185003005190F1 /* Ingredient.swift in Sources */,
 				78199D0A231F0A2800D0297F /* Array+NilRemoval.swift in Sources */,
+				78199D10232039FD00D0297F /* SearchBar.swift in Sources */,
 				78476BFD231EE059005190F1 /* Date+Formatter.swift in Sources */,
 				78476BBE23184E88005190F1 /* WebService.swift in Sources */,
 				78476BC123184F56005190F1 /* Cocktail.swift in Sources */,
@@ -378,7 +379,6 @@
 				78476BEE231D50D8005190F1 /* StrokeText.swift in Sources */,
 				78476BA723184DFC005190F1 /* ContentView.swift in Sources */,
 				78476C02231F01ED005190F1 /* LoadingView.swift in Sources */,
-				78199D0E231FF82600D0297F /* CocktailList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

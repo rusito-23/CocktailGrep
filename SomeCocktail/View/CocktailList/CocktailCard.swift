@@ -36,7 +36,7 @@ struct CocktailCard: View {
             HStack() {
                 StrokeText(text: cocktail.name,
                            font: UIFont(name:"Helvetica-Bold", size: 35.0)!)
-                    .padding(.leading).padding(.top, -50)
+                    .padding(.leading).padding(.top, -50) // TODO: do not cut
                 
                 Image(uiImage: alcoholicSign).resizable()
                     .frame(width: 150, height: 150)

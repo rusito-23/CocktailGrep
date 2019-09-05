@@ -19,13 +19,14 @@ class CocktailListViewModel: ObservableObject {
     
     @Published var cocktails = [Cocktail]()
     @Published var loading = true
+    var query: String = "" { didSet { fetchCocktails() } }
     
     // MARK: Custom
     
     private let webService = injector.resolve(WebService.self)
      
     private func fetchCocktails() {
-        webService?.search(by: "") { cocktails in
+        webService?.search(by: query) { cocktails in
             DispatchQueue.main.async {
                 self.cocktails = cocktails
                 self.loading = false

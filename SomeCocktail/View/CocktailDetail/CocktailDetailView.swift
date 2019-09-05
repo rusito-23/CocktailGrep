@@ -22,11 +22,7 @@ struct CocktailDetailView: View {
             ScrollView {
                 VStack {
                     
-                    // MARK: General
-                    
-                    Text(self.cocktail.name)
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
+                    // MARK: Image
                     
                     Image(uiImage: self.imageModel.image)
                         .resizable()
@@ -58,7 +54,7 @@ struct CocktailDetailView: View {
                     }
                     
                 }
-            }
+            }.navigationBarTitle(self.cocktail.name)
         }
     }
 }

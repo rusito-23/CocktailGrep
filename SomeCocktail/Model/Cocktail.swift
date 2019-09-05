@@ -87,4 +87,10 @@ struct Cocktail: Identifiable, Decodable {
         }
     }
     
+    init(with message: String) {
+        id = "ERROR"
+        name = message
+        ingredients = []
+    }
+    
 }

@@ -11,24 +11,36 @@ import SwiftUI
 struct CocktailListContainer: View {
     
     @ObservedObject var model = CocktailListViewModel()
-    @State private var searchField = ""
     
-    var listView: some View {
-        if model.cocktails.isEmpty && !model.loading {
-            return AnyView(ErrorView())
-        }
-        
-        return AnyView(
-            VStack {
-                // TextField("Search by name", text: $searchField)
-                CocktailList(cocktails: self.model.cocktails)
+    var cocktails: [Cocktail] {
+        get {
+            if model.cocktails.isEmpty {
+                return [Cocktail(with: "Sorry! No cocktails where found.")]
+            } else {
+                return model.cocktails
             }
-        )
+        }
     }
     
     var body: some View {
         LoadingView(isShowing: .constant(self.model.loading)) {
-            self.listView
+            VStack {
+                List {
+                    SearchBar(didChange: { query in
+                        self.model.query = query
+                    })
+                    
+                    ForEach(self.cocktails) { cocktail in
+                        NavigationLink(destination: CocktailDetailView(cocktail: cocktail )) {
+                            CocktailCard(cocktail: cocktail)
+                                .frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,
+                                       minHeight: 0, idealHeight: 150, maxHeight: 200, alignment: .center)
+                                .padding(.trailing, 10).padding(.leading, 10)
+                        }
+                    }
+
+                }
+            }
         }
     }
     
