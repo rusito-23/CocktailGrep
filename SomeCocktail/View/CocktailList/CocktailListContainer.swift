@@ -12,16 +12,6 @@ struct CocktailListContainer: View {
     
     @ObservedObject var model = CocktailListViewModel()
     
-    var cocktails: [Cocktail] {
-        get {
-            if model.cocktails.isEmpty {
-                return [Cocktail(with: "Sorry! No cocktails where found.")]
-            } else {
-                return model.cocktails
-            }
-        }
-    }
-    
     var body: some View {
         LoadingView(isShowing: .constant(self.model.loading)) {
             VStack {
@@ -30,8 +20,8 @@ struct CocktailListContainer: View {
                         self.model.query = query
                     })
                     
-                    ForEach(self.cocktails) { cocktail in
-                        NavigationLink(destination: CocktailDetailView(cocktail: cocktail )) {
+                    ForEach(self.model.cocktails) { cocktail in
+                        NavigationLink(destination: CocktailDetailView(cocktail: cocktail)) {
                             CocktailCard(cocktail: cocktail)
                                 .frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,
                                        minHeight: 0, idealHeight: 150, maxHeight: 200, alignment: .center)
